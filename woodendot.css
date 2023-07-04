@@ -182,7 +182,7 @@ main{width: 100%}
 .img-bar{display: flex;}
 .img-bar img {flex-grow: 1; flex-shrink: 1;}
 
-.cards > div {background: #F7F7F7;}
+.cards {background: #F7F7F7;}
 .btn
 {
 	padding: 0;
@@ -192,8 +192,11 @@ main{width: 100%}
 	color: #000;
 	text-align: center;
 	font-size: 17px;
-	font-family: Roboto, sans-serif;
 	line-height: 22px;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	font-family: Roboto, sans-serif;
 }
 .line
 {
@@ -202,12 +205,21 @@ main{width: 100%}
 	background-color: black;
 	position: relative;
 }
-.price, .desc, .char, .adv, .red-alert {font-family: Cardo, serif;}
+.price, .desc, .char, .adv, .red-alert
+{
+	display: flex;
+	flex-direction: column;
+	font-family: Cardo, serif;
+	flex-shrink: 0;
+}
 .name
 {
+	display: flex;
+	flex-direction: column;
 	font-family: Roboto, sans-serif;
 	font-weight: 700;
 	margin-bottom: 4px;
+	flex-shrink: 0;
 }
 .cloe
 {
@@ -332,6 +344,7 @@ main{width: 100%}
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	height: 571px;
 }
 
 .alada .text
@@ -396,7 +409,7 @@ main{width: 100%}
 	margin-bottom: 48px;
 }
 
-.alada .btn{margin-bottom: 0.53px}
+.alada .btn {margin-bottom: 0.53px}
 .alada .line {left: 5px}
 
 .alba
@@ -405,17 +418,19 @@ main{width: 100%}
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: flex-end;
+	margin-bottom: 28.8px;
 }
-.alba > img {margin-bottom: 25px}
+.alba > img {margin-block: 29px 25px}
 .alba .text
 {
 	width: 28%;
-	height: 519px;
+	height: 519.234px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	margin-inline: auto;
+	align-self: flex-end;
+	margin-block: 76.59px 0.17px;
 }
 .alba .name
 {
@@ -451,29 +466,50 @@ main{width: 100%}
 	line-height: 27.2px;
 	margin-bottom: 47px;
 }
-.alba .btn {margin-bottom: 0.44px;}
+.alba .btn
+{
+	margin-bottom: 0.44px;
+	color: #000;
+	text-align: center;
+	font-size: 17px;
+	font-family: Roboto;
+	font-style: normal;
+	line-height: 22px;
+}
 .alba .line
 {
 	right: 5px;
-	margin-bottom: 57px;
+	margin-bottom: 55.56px;
+}
+.alba .awards
+{
+	width: 230px;
+	height: 70px;
+	flex-shrink: 0;
+	margin-bottom: 11.83;
+	background: url(items/pics/alba_awards.png);
 }
 
 .batea
 {
+	height: 567.219px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	margin-bottom: 20px;
 }
 
 .batea .text
 {
-	height: 591px;
+	height: 466px;
 	width: 26.7%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	margin-right: 3.3%;
 }
+
+.batea > img {align-self: flex-start;}
 
 .batea .name
 {
@@ -520,3 +556,109 @@ main{width: 100%}
 .batea .btn{margin-bottom: 0.53px}
 .batea .line {left: 5px}
 
+.ins
+{
+	background: #F7F7F7;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ins .pieces
+{
+
+	margin-inline: auto;
+	display: flex;
+	width: 100%;
+	padding: 22.391px 0px 20px 0px;
+	flex-direction: column;
+	align-items: center;
+	gap: 37.609px;
+}
+
+.pieces .text
+{
+	width: 78%;
+	height: 92px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin-inline: auto;
+}
+._1
+{
+	display: flex;
+	width: 404px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #3A3A3A;
+	text-align: center;
+	font-size: 30px;
+	font-family: Cardo, serif;
+	font-weight: 700;
+	line-height: 39px;
+}
+._2
+{
+	display: flex;
+	width: 497px;
+	flex-direction: column;
+	flex-shrink: 0;
+	text-align: center;
+	font-size: 18px;
+	font-family: Cardo, serif;
+	line-height: 33.429px;
+}
+.pieces .img
+{
+	width: 78%;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.9%;
+	align-items: center;
+}
+.pieces .img img
+{
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+.pieces .black-squares{margin-bottom: 52.27px}
+
+.quote
+{
+	height: 312px;
+	flex-shrink: 0;
+	background: #F6F6F6;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.quote ._1
+{
+	margin-top: 83px;
+	display: flex;
+	width: 82.64%;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #020202;
+	text-align: center;
+	font-size: 20px;
+	font-family: Cardo, serif;
+	font-style: italic;
+	line-height: 30px;
+}
+
+.quote ._2
+{
+	margin-top: 37px;
+	display: flex;
+	width: 12.22%;
+	flex-direction: column;
+	flex-shrink: 0;
+	text-align: center;
+	font-size: 15px;
+	font-family: Cardo, serif;
+	line-height: 21px;
+	margin-bottom: 49.33px;
+}
